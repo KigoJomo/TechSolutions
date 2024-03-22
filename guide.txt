@@ -1,0 +1,89 @@
+Task Description:
+You are tasked with creating a homepage for a fictional company named "Tech Solutions Inc." The homepage should include a header, navigation bar, hero section, about section, services section, and a footer. Your goal is to create a visually appealing layout using HTML and CSS.
+
+Instructions:
+HTML Structure:
+
+Create an HTML file named index.html.
+Set up the basic structure of the HTML document including
+<!DOCTYPE html>, <html>, <head>, and <body> tags.
+Inside the <body> tag, create the following sections:
+Header
+Navigation bar
+Hero section
+About section
+Services section
+Footer
+
+
+Header Section:
+```
+Include the company name "Tech Solutions Inc." as the heading.
+Add a brief tagline or description below the company name.
+
+
+Navigation Bar:
+```
+Create a horizontal navigation bar with links to the following sections:
+1. Home
+2. About
+3. Services
+4. Contact
+
+
+Hero Section:
+```
+Design a visually appealing hero section with a background image related to technology.
+Include a prominent headline welcoming visitors to Tech Solutions Inc.
+Add a call-to-action (CTA) button with the text "Learn More".
+
+
+About Section:
+```
+Provide a brief overview of Tech Solutions Inc.
+Include some key points about the company's mission, values, or history.
+You can use lorem ipsum text for placeholder content.
+
+
+Services Section:
+```
+List at least three services offered by Tech Solutions Inc.
+Each service should have a title, description, and an icon representing the service.
+You can use font awesome icons for this purpose.
+
+
+Footer:
+```
+Design a footer section with links to social media profiles (e.g., Facebook, Twitter, LinkedIn).
+Include copyright information and a disclaimer if needed.
+
+
+CSS Styling:
+```
+Create a separate CSS file named styles.css.
+Apply styles to achieve a visually appealing layout.
+Use CSS properties like font-family, color, background-color, padding, margin, border, text-align, display, and flexbox to layout elements.
+Ensure the website is responsive and looks good on both desktop and mobile devices.
+You can use media queries to make the layout responsive.
+
+
+Validation and Testing:
+```
+1. Validate your HTML and CSS code using online validators (e.g., W3C Markup Validation Service).
+2. Test your website in different web browsers (e.g., Chrome, Firefox, Safari) to ensure compatibility.
+3. Test the responsiveness of your website on various devices (e.g., desktop, laptop, tablet, smartphone).
+
+
+Submission Guidelines:
+```
+1. Submit your completed index.html and styles.css files.
+2. Ensure that your code is well-organized and easy to understand.
+3. Provide comments in your HTML and CSS code to explain complex sections or styling choices.
+
+
+Additional Notes:
+```
+Feel free to enhance the design by adding animations, transitions, or other creative elements.
+You can use Google Fonts to choose suitable fonts for your website.
+Remember to maintain a consistent design theme throughout the homepage.
+Feel free to reach out if you need further clarification or assistance!
