@@ -1,13 +1,14 @@
 /*import Playfair Display font from google*/
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
 /* breakpoints to ensure resonsiveness across different screen sizes.*/
 /*universal properties to be used across the page*/
 :root {
   --black: #19191e;
   --white: #fff0e6;
   --brown: #7d5647;
-  --font-size: 32px;
-  --golden-ratio: 1.618; /*to ensure consistent an uniform distribution of font sizes*/
+  --font-size: 16px;
+  --golden-ratio: 1.618;
+  /*to ensure consistent an uniform distribution of font sizes*/
 }
 
 /* universal styles that apply to all elements*/
@@ -16,6 +17,9 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--black);
+  font-family: "Cambay", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 /* row and column classes that can be re-used universally across the DOM for easier arrangement of elements */
@@ -37,16 +41,19 @@
 
 h1 {
   text-transform: capitalize;
-  font-size: calc(var(--font-size) * var(--golden-ratio));
+  font-size: calc(var(--font-size) * var(--golden-ratio) * var(--golden-ratio));
+  font-weight: 900;
 }
 
 h2 {
   text-transform: capitalize;
-  font-size: var(--font-size);
+  font-size: calc(var(--font-size) * var(--golden-ratio));
+  font-weight: 500;
 }
 
+a,
 p {
-  font-size: calc(var(--font-size) / var(--golden-ratio));
+  font-size: var(--font-size);
 }
 
 html {
@@ -61,6 +68,23 @@ html body {
   overflow: hidden;
   background-color: var(--white);
   justify-content: center;
+  position: relative;
+}
+html body .nav {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+@media screen and (max-width: 768px) {
+  html body .nav {
+    display: none;
+  }
+}
+html body .nav .links a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: 400;
+  font-size: 16px;
 }
 html body header {
   width: 100%;

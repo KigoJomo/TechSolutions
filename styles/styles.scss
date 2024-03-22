@@ -1,5 +1,5 @@
 /*import Playfair Display font from google*/
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
 
 /* breakpoints to ensure resonsiveness across different screen sizes.*/
 
@@ -8,8 +8,9 @@
   --black: #19191e;
   --white: #fff0e6;
   --brown: #7d5647;
-  --font-size: 32px;
-  --golden-ratio: 1.618; /*to ensure consistent an uniform distribution of font sizes*/
+  --font-size: 16px;
+  --golden-ratio: 1.618;
+  /*to ensure consistent an uniform distribution of font sizes*/
 }
 
 /* universal styles that apply to all elements*/
@@ -18,6 +19,9 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--black);
+  font-family: "Cambay", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 /* row and column classes that can be re-used universally across the DOM for easier arrangement of elements */
@@ -28,6 +32,7 @@
   justify-content: flex-start;
   gap: 16px;
 }
+
 .column {
   display: flex;
   flex-direction: column;
@@ -38,16 +43,19 @@
 
 h1 {
   text-transform: capitalize;
-  font-size: calc(var(--font-size) * var(--golden-ratio));
+  font-size: calc(var(--font-size) * var(--golden-ratio) * var(--golden-ratio));
+  font-weight: 900;
 }
 
 h2 {
   text-transform: capitalize;
-  font-size: var(--font-size);
+  font-size: calc(var(--font-size) * var(--golden-ratio));
+  font-weight: 500;
 }
 
+a,
 p {
-  font-size: calc(var(--font-size) / var(--golden-ratio));
+  font-size: var(--font-size);
 }
 
 html {
@@ -63,25 +71,45 @@ html {
     background-color: var(--white);
 
     justify-content: center;
+    position: relative;
+
+    .nav {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      position: absolute;
+      top: 16px;
+      right: 16px;
+
+      .links {
+        a {
+          text-decoration: none;
+          text-transform: capitalize;
+          font-family: 400;
+          font-size: 16px;
+        }
+      }
+    }
 
     header {
       width: 100%;
       border-bottom: 1px solid var(--black);
+
       img {
         height: 39px;
       }
+
       @media screen and (max-width: 768px) {
         img {
           height: 32px;
         }
-        & ~ nav{
-        display: none;
+
+        & ~ nav {
+          display: none;
         }
       }
     }
-    nav {
-    //   display: none;
-    }
+
     .container {
       height: 100%;
       width: 100%;
