@@ -10,32 +10,35 @@
   <title>Tech Solutions Inc.</title>
 </head>
 
-<body class="column">
-  <header>
+<body class="column body">
+  <header class="row header">
     <img src="./images/logo dark.png" alt="logo">
-  </header>
-  <!--  -->
-  <!--  -->
-  <nav class="row nav">
-    <!-- horizontal -->
-    <div class="links row">
+
+    <nav id="menu" class="row">
+      <!-- horizontal -->
       <a href="#hero">home</a>
       <a href="#about">about</a>
       <a href="#services">services</a>
       <a href="#contact">contact</a>
-    </div>
-  </nav>
+      <span id="closeMenu" class="material-symbols-outlined">close</span>
+    </nav>
+    <span id="menuButton" class="material-symbols-outlined">menu</span>
+  </header>
   <!--  -->
   <!--  -->
   <div class="container column">
     <!--  -->
-    <section class="column" id="hero">
+    <section class="row" id="hero">
       <!-- background image related to technology -->
       <!-- prominent headline welcoming visitors to Tech Solutions Inc -->
       <!-- (CTA) button with the text "Learn More" -->
-
-      <h1>home</h1>
-      <h2>this is the hero section</h2>
+      <h1>tech Solutions <br>inc.</h1>
+      <div class="column paragraph">
+        <p>We're more than just a technology company. We're
+          your strategic partner in navigating
+          the ever-evolving digital landscape.</p>
+        <a href="#about" class="button">learn more</a>
+      </div>
     </section>
     <!--  -->
     <section class="column" id="about">
@@ -64,6 +67,8 @@
     <!-- links to social media profiles -->
     <!-- Include copyright information and a disclaimer if needed -->
   </footer>
+
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>

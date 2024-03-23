@@ -1,25 +1,28 @@
-/*import Playfair Display font from google*/
-@import url("https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+/*import Bai Jamjuree font from google*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* breakpoints to ensure resonsiveness across different screen sizes.*/
 
+$brown: #7d5647;
+$tint: #000000;
 /*universal properties to be used across the page*/
 :root {
   --black: #19191e;
   --white: #fff0e6;
-  --brown: #7d5647;
+  --brown: $brown;
+  --tint: #1414143d;
   --font-size: 16px;
   --golden-ratio: 1.618;
   /*to ensure consistent an uniform distribution of font sizes*/
+  --text-shadow: 3px 3px 5px #141414;
 }
-
 /* universal styles that apply to all elements*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--black);
-  font-family: "Cambay", serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -44,7 +47,7 @@
 h1 {
   text-transform: capitalize;
   font-size: calc(var(--font-size) * var(--golden-ratio) * var(--golden-ratio));
-  font-weight: 900;
+  font-weight: 700;
 }
 
 h2 {
@@ -54,58 +57,101 @@ h2 {
 }
 
 a,
+button,
 p {
   font-size: var(--font-size);
+}
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.button,
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: $brown;
+  color: var(--white);
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  &:hover {
+    background-color: darken($brown, 5%);
+  }
 }
 
 html {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 
-  body {
+  .body {
     height: 100%;
     width: 100%;
     padding: 16px 16px;
     overflow: hidden;
     background-color: var(--white);
 
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
 
-    .nav {
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-      position: absolute;
-      top: 16px;
-      right: 16px;
-
-      .links {
-        a {
-          text-decoration: none;
-          text-transform: capitalize;
-          font-family: 400;
-          font-size: 16px;
-        }
-      }
-    }
-
-    header {
+    .header {
       width: 100%;
-      border-bottom: 1px solid var(--black);
+      align-items: last baseline;
+      justify-content: space-between;
 
       img {
-        height: 39px;
+        height: 36px;
       }
-
-      @media screen and (max-width: 768px) {
-        img {
-          height: 32px;
-        }
-
-        & ~ nav {
+      #menuButton {
+        display: none;
+        cursor: pointer;
+      }
+      nav {
+        height: 100%;
+        gap: 48px;
+        #closeMenu {
           display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        img {
+          height: 24px;
+        }
+        #menuButton {
+          display: block;
+        }
+        nav {
+          display: none;
+        }
+        .openMenu {
+          display: flex;
+          position: absolute;
+          flex-direction: column;
+          width: 100vw;
+          height: 100vh;
+          left: 0;
+          top: 0;
+          z-index: 2;
+          background-color: var(--black);
+          justify-content: center;
+          padding-bottom: 25vh;
+          gap: 24px;
+          a {
+            color: var(--white);
+            font-size: calc(var(--font-size) * var(--golden-ratio));
+            font-weight: 100;
+          }
+          #closeMenu {
+            display: block;
+            color: var(--white);
+            position: absolute;
+            top: 48px;
+            right: 24px;
+          }
         }
       }
     }
@@ -116,13 +162,52 @@ html {
       overflow-y: scroll;
       scroll-snap-type: y mandatory;
       scroll-behavior: smooth;
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       section {
         height: 100%;
         width: 100%;
         flex-shrink: 0;
+        border-radius: 16px;
         scroll-snap-align: start;
         justify-content: center;
+      }
+      #hero {
+        background: url("../images/tech.jfif");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 96px 96px;
+        align-items: last baseline;
+        h1 {
+          width: 50%;
+          color: var(--white);
+          text-shadow: var(--text-shadow);
+        }
+        .paragraph {
+          padding: 8px 16px;
+          border-radius: 8px;
+          background: var(--tint);
+          backdrop-filter: blur(5px);
+          width: 50%;
+          align-items: flex-start;
+          p {
+            color: var(--white);
+            text-shadow: var(--text-shadow);
+          }
+        }
+        @media (max-width: 768px) {
+          flex-direction: column;
+          padding: 24px;
+          align-items: first baseline;
+          gap: 48px;
+          h1,
+          .paragraph {
+            width: 100%;
+          }
+        }
       }
     }
   }
