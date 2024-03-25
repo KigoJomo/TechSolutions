@@ -381,3 +381,82 @@ html .body .container #services .servicesContainer .service .desc p {
     width: 100%;
   }
 }
+html .body .container #contact {
+  overflow: hidden;
+  justify-content: flex-start;
+}
+html .body .container #contact .cards {
+  width: 70%;
+  height: 60%;
+  justify-content: center;
+  padding: 16px 0;
+  gap: 48px;
+}
+html .body .container #contact .cards .card {
+  height: 100%;
+  width: calc(33.3% - 32px);
+  border: 1px solid var(--black);
+  border-top: 10px solid var(--brown);
+  border-radius: 16px;
+  padding: 16px 32px;
+  box-shadow: 10px 10px 20px 0px rgba(70, 70, 70, 0.337254902);
+}
+html .body .container #contact .cards .card h2 {
+  height: 30%;
+}
+html .body .container #contact .cards .card p {
+  height: 55%;
+}
+html .body .container #contact .cards .card .cardButton {
+  width: 100%;
+}
+html .body .container #contact .cards .card:nth-child(1) .cardButton, html .body .container #contact .cards .card:nth-child(3) .cardButton {
+  background-color: transparent;
+  color: var(--black);
+  border: 1px solid var(--brown);
+}
+html .body .container #contact .cards .card:nth-child(1) .cardButton:hover, html .body .container #contact .cards .card:nth-child(3) .cardButton:hover {
+  background-color: var(--brown);
+  color: var(--white);
+}
+html .body .container #contact .footer {
+  width: 100%;
+  height: 30%;
+  background-color: var(--black);
+  justify-content: center;
+}
+html .body .container #contact .footer .links {
+  gap: 48px;
+}
+html .body .container #contact .footer .links a {
+  color: var(--white);
+}
+html .body .container #contact .footer .links a:hover {
+  text-decoration: underline;
+}
+html .body .container #contact .footer .socialMedia {
+  align-items: last baseline;
+}
+html .body .container #contact .footer .socialMedia img {
+  height: 24px;
+  padding-right: 32px;
+}
+html .body .container #contact .footer .socialMedia a {
+  color: var(--white);
+  font-size: 24px;
+}
+html .body .container #contact .footer .copyright {
+  color: var(--white);
+  text-transform: capitalize;
+  padding-top: 16px;
+}
+@media (max-width: 768px) {
+  html .body .container #contact * {
+    display: none;
+  }
+  html .body .container #contact h1,
+  html .body .container #contact .p {
+    display: block;
+    text-align: center;
+  }
+}

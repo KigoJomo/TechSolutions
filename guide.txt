@@ -88,23 +88,3 @@ You can use Google Fonts to choose suitable fonts for your website.
 Remember to maintain a consistent design theme throughout the homepage.
 Feel free to reach out if you need further clarification or assistance!
 
-
-
-
-
-
-
-.paragraph {
-          padding: 8px 16px;
-          border-radius: 8px;
-          background: var(--tint);
-          backdrop-filter: blur(50px);
-          width: 50%;
-          align-items: flex-start;
-          p {
-            color: var(--white);
-            text-shadow: var(--text-shadow);
-          }
-        }
-
-the blur seems to be affecting the clarity of the text. How do I solve that?
