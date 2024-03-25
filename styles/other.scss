@@ -93,7 +93,11 @@ html {
     height: 100%;
     width: 100%;
     padding: 16px 48px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      display: none;
+    }
     background-color: var(--white);
 
     justify-content: flex-start;

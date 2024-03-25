@@ -94,11 +94,15 @@ html .body {
   height: 100%;
   width: 100%;
   padding: 16px 48px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-color: var(--white);
   justify-content: flex-start;
   padding-top: 10vh;
   gap: 48px;
+}
+html .body::-webkit-scrollbar {
+  display: none;
 }
 html .body p {
   line-height: calc(var(--font-size) * 1.8);
