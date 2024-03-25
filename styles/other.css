@@ -96,7 +96,8 @@ html .body {
   padding: 16px 48px;
   overflow: hidden;
   background-color: var(--white);
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 10vh;
   gap: 48px;
 }
 html .body p {

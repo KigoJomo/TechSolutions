@@ -462,7 +462,7 @@ html .body .container #contact .footer .copyright {
     justify-content: flex-start;
     gap: 1px;
     overflow-x: scroll;
-    overflow-y: visible;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding: 0;
@@ -489,6 +489,10 @@ html .body .container #contact .footer .copyright {
     box-shadow: 1px 3px 20px 0px rgba(70, 70, 70, 0.337254902);
     position: relative;
     align-items: center;
+    padding: 8px 16px;
+  }
+  html .body .container #contact .cards .card .heading {
+    height: 15%;
   }
   html .body .container #contact .cards .card p {
     text-align: center;
