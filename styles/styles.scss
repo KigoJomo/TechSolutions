@@ -245,6 +245,7 @@ html {
         .left {
           // width: 40%;
           background: url("../images/building.jfif") center/cover no-repeat;
+          box-shadow: 10px 10px 20px 0px #46464656;
         }
         .right {
           // width: 60%;
@@ -283,6 +284,7 @@ html {
           }
           .left {
             position: absolute;
+            box-shadow: none;
           }
           .right {
             justify-content: flex-end;
@@ -419,6 +421,7 @@ html {
             border-radius: 16px;
             padding: 16px 32px;
             box-shadow: 10px 10px 20px 0px #46464656;
+            align-items: flex-start;
 
             .heading {
               height: 30%;
@@ -478,14 +481,74 @@ html {
             text-transform: capitalize;
           }
         }
-        @media (max-width: 768px) {
-          * {
-            display: none;
+
+        @media (max-width: 786px) {
+          // align-items: flex-start;
+          .cards {
+            // border: 1px solid var(--black);
+            width: 80%;
+            justify-content: flex-start;
+            gap: 1px;
+            overflow-x: scroll;
+            overflow-y: visible;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 0;
+            padding-bottom: 8px;
+            &::-webkit-scrollbar {
+              height: 4px;
+              border-radius: 8px;
+            }
+            &::-webkit-scrollbar-track {
+              border-radius: 8px;
+              background-color: var(--black);
+              border-top: 2px solid var(--white);
+              border-bottom: 2px solid var(--white);
+            }
+            &::-webkit-scrollbar-thumb {
+              background-color: var(--black);
+              border-radius: 8px;
+            }
+            .card {
+              width: 100%;
+              scroll-snap-align: start;
+              flex-shrink: 0;
+              box-shadow: 1px 3px 20px 0px #46464656;
+              position: relative;
+              align-items: center;
+              p {
+                text-align: center;
+              }
+            }
           }
-          h1,
-          .p {
-            display: block;
-            text-align: center;
+          .footer {
+            align-items: center;
+            justify-content: space-around;
+            gap: 0;
+            .links {
+              width: 80%;
+              height: 40%;
+              order: 2;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+              column-gap: 16px;
+              row-gap: 8px;
+              flex-wrap: wrap;
+            }
+            .socialMedia {
+              order: 1;
+              width: 100%;
+              justify-content: center;
+              img {
+                height: 16px;
+                padding-right: 24px;
+              }
+            }
+            .copyright {
+              order: 3;
+              display: none;
+            }
           }
         }
       }
