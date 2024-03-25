@@ -1,0 +1,144 @@
+/*import Bai Jamjuree font from google*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+/* breakpoints to ensure resonsiveness across different screen sizes.*/
+/*universal properties to be used across the page*/
+:root {
+  --black: #19191e;
+  --white: #fff0e6;
+  --brown: #7d5647;
+  --tint: #141414a1;
+  --font-size: 16px;
+  --golden-ratio: 1.618;
+  /*to ensure consistent an uniform distribution of font sizes*/
+  --text-shadow: 3px 3px 5px #141414;
+}
+
+/* universal styles that apply to all elements*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--black);
+  font-family: "Bai Jamjuree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* row and column classes that can be re-used universally across the DOM for easier arrangement of elements */
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: calc(var(--font-size) * var(--golden-ratio) * var(--golden-ratio));
+  font-weight: 700;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-size: calc(var(--font-size) * var(--golden-ratio));
+  font-weight: 500;
+}
+
+a,
+button,
+p {
+  font-size: var(--font-size);
+  line-height: calc(var(--font-size) * 1.4);
+  font-weight: 400;
+}
+
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.button,
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #7d5647;
+  color: var(--white);
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+.button:hover,
+button:hover {
+  background-color: #6d4b3e;
+}
+
+html {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+html .body {
+  height: 100%;
+  width: 100%;
+  padding: 16px 48px;
+  overflow: hidden;
+  background-color: var(--white);
+  justify-content: center;
+  gap: 48px;
+}
+html .body p {
+  line-height: calc(var(--font-size) * 1.8);
+}
+html .body form {
+  width: 100%;
+  gap: 32px;
+}
+html .body form .fieldWrapper {
+  gap: 16px;
+  width: 100%;
+  align-items: flex-start;
+}
+html .body form .fieldWrapper textarea,
+html .body form .fieldWrapper input {
+  background-color: var(--white);
+  width: 100%;
+  border: 1px solid var(--brown);
+  border-radius: 8px;
+  padding: 16px;
+}
+html .body form .fieldWrapper textarea:focus,
+html .body form .fieldWrapper input:focus {
+  outline: none;
+  box-shadow: 2px 2px 20px 0px rgba(51, 51, 51, 0.2941176471);
+}
+html .body form .fieldWrapper textarea {
+  height: auto;
+  resize: none;
+}
+html .body form button {
+  color: var(--white);
+}
+html .body button {
+  gap: 16px;
+}
+html .body button span {
+  text-transform: lowercase;
+  color: var(--white);
+  font-size: 16px;
+}
+html .body button p {
+  color: var(--white);
+}

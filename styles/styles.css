@@ -384,10 +384,11 @@ html .body .container #services .servicesContainer .service .desc p {
 html .body .container #contact {
   overflow: hidden;
   justify-content: flex-start;
+  gap: 16px;
 }
 html .body .container #contact .cards {
-  width: 70%;
-  height: 60%;
+  width: 80%;
+  height: 70%;
   justify-content: center;
   padding: 16px 0;
   gap: 48px;
@@ -401,8 +402,9 @@ html .body .container #contact .cards .card {
   padding: 16px 32px;
   box-shadow: 10px 10px 20px 0px rgba(70, 70, 70, 0.337254902);
 }
-html .body .container #contact .cards .card h2 {
+html .body .container #contact .cards .card .heading {
   height: 30%;
+  gap: 8px;
 }
 html .body .container #contact .cards .card p {
   height: 55%;
@@ -421,7 +423,7 @@ html .body .container #contact .cards .card:nth-child(1) .cardButton:hover, html
 }
 html .body .container #contact .footer {
   width: 100%;
-  height: 30%;
+  height: 25%;
   background-color: var(--black);
   justify-content: center;
 }
@@ -430,6 +432,7 @@ html .body .container #contact .footer .links {
 }
 html .body .container #contact .footer .links a {
   color: var(--white);
+  font-size: 14px;
 }
 html .body .container #contact .footer .links a:hover {
   text-decoration: underline;
@@ -438,7 +441,7 @@ html .body .container #contact .footer .socialMedia {
   align-items: last baseline;
 }
 html .body .container #contact .footer .socialMedia img {
-  height: 24px;
+  height: 20px;
   padding-right: 32px;
 }
 html .body .container #contact .footer .socialMedia a {
@@ -447,8 +450,8 @@ html .body .container #contact .footer .socialMedia a {
 }
 html .body .container #contact .footer .copyright {
   color: var(--white);
+  font-size: 14px;
   text-transform: capitalize;
-  padding-top: 16px;
 }
 @media (max-width: 768px) {
   html .body .container #contact * {
