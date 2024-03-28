@@ -95,7 +95,7 @@ html {
     padding: 16px 48px;
     overflow-x: hidden;
     overflow-y: scroll;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
     }
     background-color: var(--white);
@@ -107,7 +107,10 @@ html {
       line-height: calc(var(--font-size) * 1.8);
     }
     form {
-      width: 100%;
+      width: 30%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
       gap: 32px;
       h2 {
       }
